@@ -1,0 +1,25 @@
+<% include header %>
+<div>
+    <div class="search">
+        <label>UserId?</label>
+        <input type="text" name="suserid" value="<%=user  %>" placeholder="input the userid">
+        <input type="button" name="sSearch" value="Search" class="btn" onclick="Search();">
+    </div>
+    <div class="control">
+        <input class="btn" type='submit' value='Add' onclick="javascript: location.href='add'">
+    </div>
+    <table class="table">
+        <tr>
+            <th>id</th>
+            <th>userid</th>
+            <th>password</th>
+            <th>email</th>
+            <th>password</th>
+            <th>email</th>
+            <th></th>
+        </tr>
+
+    </table>
+</div>
+<% include footer %>
+
