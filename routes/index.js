@@ -1,6 +1,31 @@
 var express = require('express');
 var router = express.Router();
 
+router.get('/main', function(req, res, next) {
+
+    var db = req.con;
+    var data = "";
+
+    var user = "";
+    var user = req.query.user;
+
+    var filter = "";
+    if (user) {
+        filter = 'WHERE userid = ?';
+    }
+
+    db.query('SELECT * FROM account ' + filter, user, function(err, rows) {
+        if (err) {
+            console.log(err);
+        }
+        var data = rows;
+
+        // use index.ejs
+        res.render('main', { title: 'Node-Angular-MySQL', data: data, user: user });
+
+    });
+
+});
 // home page
 router.get('/', function(req, res, next) {
 
@@ -31,7 +56,7 @@ router.get('/', function(req, res, next) {
 router.get('/add', function(req, res, next) {
 
     // use userAdd.ejs
-    res.render('userAdd', { title: 'Add User', msg: '' });
+    res.render('userAdd', { title: 'Add kkksUser', msg: '' });
 });
 
 // add post

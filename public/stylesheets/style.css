@@ -1,6 +1,7 @@
 body {
-    padding: 50px;
+    /*padding: 50px;*/
     font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    background-image: url('/images/body.gif');
 }
 
 
@@ -94,4 +95,7 @@ a:hover {
     margin: 5px;
     color: #f00;
     font-size: 12px;
+}
+.header{
+    background-color: #761c19;
 }
