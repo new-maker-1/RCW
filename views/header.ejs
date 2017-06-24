@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        <%= title %>
+    </title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="/bootstrap-3.3.5/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/bootstrap-3.3.5/dist/css/bootstrap-theme.min.css" />
+</head>
+
+<body ng-app="myApp">
+    <script src="/js/jquery-2.2.3.min.js"></script>
+    <script src="/bootstrap-3.3.5/dist/js/bootstrap.min.js"></script>
+    <script src="/angular-1.6.4/angular.min.js"></script>
+    <script src="/angular-1.6.4/angular-route.min.js"></script>
+
+    <script src="/myapp.js"></script>
+
+    <div class="container header" ng-controller="myheader">
+        <h1 ng-model = "mytitle">{{mytitle}}</h1>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">WebSiteName</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#">Page 1</a></li>
+                    <li><a href="#">Page 2</a></li>
+                    <li><a href="#">Page 3</a></li>
+                    <li><a href="#">Page 2</a></li>
+                    <li><a href="#">Page 3</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
